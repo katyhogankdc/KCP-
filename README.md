@@ -35,8 +35,9 @@ sg.grade AS LetterGrade,
 sg.earnedcrhrs AS EarnedCreditHours, 
 sg.Course_name AS CourseName, 
 sg.Credit_type AS SubjectArea,
-sg.Grade_Level AS GradeLevel, 
-sg.termbinsname AS Term
+sg.Grade_Level AS HistGradeLevel, 
+sg.termbinsname AS Term,
+st.grade_level AS CurrentGrade
 from powerschool.powerschool_storedgrades sg
-JOIN powerschool.powerschool_students st ON st.id = sg.studentid 
+JOIN powerschool.powerschool_students st ON st.id = sg.studentid
 ```
